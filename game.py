@@ -31,7 +31,7 @@ class Game:
 
         self.clouds  = clouds(self.assets['clouds'], count=16)
         self.movement = [False, False]
-        self.player = Player(self,(50,50),(8,15))
+        self.player = Player(self,(50,50),(8,16))
         self.tilemap = Tilemap(self,tile_size=16)
         self.scroll = [0,0]
     def run(self):
@@ -66,6 +66,5 @@ class Game:
             self.screen.blit(pygame.transform.scale(self.display, self.screen.get_size()),(0,0))
             pygame.display.update()
             self.clock.tick(60)
-
 
 Game().run()
